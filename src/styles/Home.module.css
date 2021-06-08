@@ -1,0 +1,13 @@
+.headerTop{
+  
+  display: flex;
+  justify-content: space-between;
+  background-color: #d3f3ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.found{
+  color: #217ea0;
+  font-weight: 500;
+}
