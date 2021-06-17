@@ -1,0 +1,12 @@
+.card{
+  background-color: #fff;
+  border-radius: 5px;
+  
+}
+.img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.descr{
+  padding: 15px 20px;
+}

@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './SearchInput.module.css'
-const SearchInput = () => {
+import SearchRounded from "@material-ui/icons/SearchRounded";
+const SearchInput = ({...rest}) => {
   return (
-    <div>
-      <input className={styles.input} type="text" placeholder="Enter a name,region or subregion"/>
-      
+    <div className={styles.search}>
+      <SearchRounded className={styles.icon}/>
+      <input className={styles.input} {...rest} type="text" placeholder="Enter a name,region or subregion"/>
     </div>
   )
 }
