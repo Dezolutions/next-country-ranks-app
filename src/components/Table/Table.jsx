@@ -62,10 +62,6 @@ const Table = ({countries}) => {
           <button className={styles.button}>Area(km²)</button>
         </div>
 
-        <div className={styles.buttonBlock} onClick={() => setValueAndDirection('gini')}>
-        {value === "gini" && <SortArrow direction={direction} />}
-          <button className={styles.button}>Gini</button>
-          </div>
 
       </div>
       <ul>

@@ -1,5 +1,6 @@
 .flag {
   width: 80px;
+  height: 55px;
   margin-right: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -7,6 +8,7 @@
 .country {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 5px;
   background-color: #fff;
   margin: 20px 0;
@@ -20,9 +22,32 @@
 .countryName {
   display: flex;
   justify-content: start;
+  align-items: center;
   width: 25%;
 }
 .countryItem {
   width: 25%;
-  padding-left: 20px;
+  padding-left: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .countryItem {
+    font-size: 14px;
+    width: 20%;
+  }
+  .flag{
+    width: 55px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .countryName{
+    width: 37%;
+  }
+  .countryItem{
+    width: 18%;
+    padding-left: 0;
+  }
+}
+

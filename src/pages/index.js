@@ -7,21 +7,19 @@ import styles from '../styles/Home.module.css'
 
 const Home = ({ countries }) => {
   const [keyword, setKeyword] = React.useState('')
-  console.log(countries)
   const filteredCountries = countries.filter(country =>
     country.name.toLowerCase().includes(keyword) ||
     country.region.toLowerCase().includes(keyword) ||
     country.subregion.toLowerCase().includes(keyword)
   )
-  const onInputChange = e => {
-
-    setKeyword(e.target.value.toLowerCase())
-  }
+  const onInputChange = e => setKeyword(e.target.value.toLowerCase())
+  
   return (
 
     <Layout>
+      <div className={styles.found}>Found {countries.length} countries</div>
       <div className={styles.headerTop}>
-        <div className={styles.found}>Found {countries.length} countries</div>
+        
         <SearchInput onChange={onInputChange} />
       </div>
       <Table countries={filteredCountries} />

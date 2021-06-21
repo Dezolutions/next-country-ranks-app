@@ -9,11 +9,12 @@
   font-family: 'Holtwood One SC', serif;
 }
 .container{
-  padding: 0 20%;
+  padding: 0 5%;
 }
 .header{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px 0;
 
 }
