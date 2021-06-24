@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchInput from '../components/SearchInput/SearchInput'
 import axios from 'axios'
+import debounce from '../functions/debounce'
 import Table from '../components/Table/Table'
 import Layout from '../Layout/Layout'
 import styles from '../styles/Home.module.css'
@@ -12,15 +13,7 @@ const Home = ({ countries }) => {
     country.region.toLowerCase().includes(keyword) ||
     country.subregion.toLowerCase().includes(keyword)
   )
-  //debounce function
-  const debounce = (fn, ms) => {
-    let timeout;
-    return function () {
-      const fnCall = () =>  fn.apply(this, arguments) 
-      clearTimeout(timeout);
-      timeout = setTimeout(fnCall, ms)
-    };
-  }
+
   let onInputChange = e => setKeyword(e.target.value.toLowerCase())
   onInputChange = debounce(onInputChange,250)
   
