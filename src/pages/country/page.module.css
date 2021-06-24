@@ -9,9 +9,18 @@
   text-align: center;
 }
 .link{
-  display: inline-block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
   color: #217ea0;
-  border-bottom: 1px solid #217ea0;;
+  transition: .2s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.link:hover{
+  border-bottom: none;
+  background-color: #c4ecfa;
 }
 .img{
   width: 100%;

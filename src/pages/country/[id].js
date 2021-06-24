@@ -2,13 +2,13 @@ import axios from 'axios'
 import React from 'react'
 import  Link  from 'next/link'
 import Layout from '../../Layout/Layout'
-import styles from './country.module.css'
+import styles from './page.module.css'
 const PageOfCountry = ({ country }) => {
 
   return (
     <Layout>
       <Link href='/' >
-        <div className={styles.linkBlock} ><p className={styles.link}>back to list</p></div>
+        <div className={styles.linkBlock} ><button className={styles.link}>back to list</button></div>
       </Link>
       <div className={styles.card}>
         <img className={styles.img} src={country.flag} alt="" />

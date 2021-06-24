@@ -7,7 +7,8 @@ const Country = React.forwardRef(function Country({flag,alpha3Code,area,name,pop
   
   return (
     <Link href={`/country/${alpha3Code}`} >
-      <div ref={ref} className={styles.country}>
+      
+      <div  ref={ref} className={styles.country}>
         <div className={styles.countryName}>
           <img src={flag} className={styles.flag} alt="" />
           <p>{name}</p>
@@ -15,6 +16,7 @@ const Country = React.forwardRef(function Country({flag,alpha3Code,area,name,pop
         <p className={styles.countryItem} >{abbreviate(population)}</p>
         <p className={styles.countryItem} >{abbreviate(area)}</p>
       </div>
+      
     </Link>
   )
 })

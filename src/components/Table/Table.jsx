@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Coutnry from '../Country/Country'
+import Country from '../Country/Country'
 import styles from './Table.module.css'
 import sortBy from '../../functions/sort'
 import {KeyboardArrowDownRounded,KeyboardArrowUpRounded} from '@material-ui/icons'
@@ -26,9 +25,11 @@ const SortArrow = ({ direction }) => {
 };
 
 const Table = ({countries}) => {
+  
   const [direction, setDirection] = React.useState()
   const [value, setValue] = React.useState()
   const orderedCountries = sortBy(countries,direction,value)
+  
 
   const switchDirection = () => {
     if (!direction) {
@@ -41,6 +42,7 @@ const Table = ({countries}) => {
   };
 
   const setValueAndDirection = (value) => {
+    
     switchDirection();
     setValue(value);
   };
@@ -64,13 +66,12 @@ const Table = ({countries}) => {
 
 
       </div>
-      <ul>
-        {orderedCountries.map(country => (
-          
-          <Coutnry  {...country} key={country.name}/>
-          
-        ))}
-      </ul>
+      
+        <ul>
+          {orderedCountries.map(country => <Country  {...country} key={country.name}/>)}
+        </ul>
+        
+      
     </>
   )
 }

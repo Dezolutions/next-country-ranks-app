@@ -12,7 +12,17 @@ const Home = ({ countries }) => {
     country.region.toLowerCase().includes(keyword) ||
     country.subregion.toLowerCase().includes(keyword)
   )
-  const onInputChange = e => setKeyword(e.target.value.toLowerCase())
+  //debounce function
+  const debounce = (fn, ms) => {
+    let timeout;
+    return function () {
+      const fnCall = () =>  fn.apply(this, arguments) 
+      clearTimeout(timeout);
+      timeout = setTimeout(fnCall, ms)
+    };
+  }
+  let onInputChange = e => setKeyword(e.target.value.toLowerCase())
+  onInputChange = debounce(onInputChange,250)
   
   return (
 
